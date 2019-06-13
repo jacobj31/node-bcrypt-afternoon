@@ -35,6 +35,7 @@ export default class Container extends Component {
       this.setState({treasures:{
       ...this.state.treasure, all:res.data}})
     })
+    .catch(err=>alert(err.response.request.response))
   }
 
   getMyTreasure() {
